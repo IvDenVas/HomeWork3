@@ -13,23 +13,15 @@ n = int(input("Введите значение N: "))
 list = []
 
 for i in range(1, n + 1):
-    list.append(i)
+    list.append((int(input(f'Введите {i} элемент массива: '))))
 
 print(list)
 
-max = min = list[0]
-
-for i in list:
-    if (i < min):
-        min = i
-    elif (i > max):
-        max = i
-
 x = int(input("Введите значение X: "))
+temp = list[0]
 
-if (x in list):
-    print(f'-> {x}')
-elif (x < min):
-    print(f'-> {min}')
-elif (x > max):
-    print(f'-> {max}')
+for i in range(1, n):
+    if (abs(list[i] - x) < abs(temp - x)):
+        temp = list[i]
+
+print(f'-> {temp}') 

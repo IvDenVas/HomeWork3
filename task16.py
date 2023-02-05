@@ -11,7 +11,7 @@ n = int(input("Введите значение N: "))
 list = []
 
 for i in range(1, n + 1):
-    list.append(i)
+    list.append((int(input(f'Введите {i} элемент массива: '))))
 
 print(list)
 
